@@ -13,6 +13,7 @@
 		3599D14C2092290600236F3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3599D14B2092290600236F3D /* Assets.xcassets */; };
 		3599D14F2092290600236F3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3599D14D2092290600236F3D /* LaunchScreen.storyboard */; };
 		3599D15C20922F2100236F3D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3599D15B20922F2100236F3D /* HomeViewController.swift */; };
+		3599D15F209233C600236F3D /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3599D15E209233C600236F3D /* Global.swift */; };
 		438B7340368B914AC33BAA3A /* Pods_Snoring_Companion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0A89FF9CC0E531722FCE9F /* Pods_Snoring_Companion.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		3599D14E2092290600236F3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3599D1502092290600236F3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3599D15B20922F2100236F3D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3599D15E209233C600236F3D /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		CB1DDA133395C11D093F56E5 /* Pods-Snoring Companion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snoring Companion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snoring Companion/Pods-Snoring Companion.debug.xcconfig"; sourceTree = "<group>"; };
 		EF0A89FF9CC0E531722FCE9F /* Pods_Snoring_Companion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snoring_Companion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 		3599D15620922C2200236F3D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3599D15D209233B300236F3D /* Global */,
 				3599D15720922C2200236F3D /* Managers */,
 			);
 			path = Model;
@@ -112,6 +115,14 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3599D15D209233B300236F3D /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				3599D15E209233C600236F3D /* Global.swift */,
+			);
+			path = Global;
 			sourceTree = "<group>";
 		};
 		B4A5B140B1AF163BC8006E9D /* Frameworks */ = {
@@ -224,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3599D15F209233C600236F3D /* Global.swift in Sources */,
 				3599D1472092290400236F3D /* ViewController.swift in Sources */,
 				3599D1452092290400236F3D /* AppDelegate.swift in Sources */,
 				3599D15C20922F2100236F3D /* HomeViewController.swift in Sources */,
@@ -373,6 +385,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Snoring Companion/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -391,6 +404,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Snoring Companion/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
