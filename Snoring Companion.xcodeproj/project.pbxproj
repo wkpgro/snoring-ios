@@ -12,6 +12,7 @@
 		3599D14A2092290400236F3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3599D1482092290400236F3D /* Main.storyboard */; };
 		3599D14C2092290600236F3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3599D14B2092290600236F3D /* Assets.xcassets */; };
 		3599D14F2092290600236F3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3599D14D2092290600236F3D /* LaunchScreen.storyboard */; };
+		3599D15C20922F2100236F3D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3599D15B20922F2100236F3D /* HomeViewController.swift */; };
 		438B7340368B914AC33BAA3A /* Pods_Snoring_Companion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0A89FF9CC0E531722FCE9F /* Pods_Snoring_Companion.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		3599D14B2092290600236F3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3599D14E2092290600236F3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3599D1502092290600236F3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3599D15B20922F2100236F3D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CB1DDA133395C11D093F56E5 /* Pods-Snoring Companion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snoring Companion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snoring Companion/Pods-Snoring Companion.debug.xcconfig"; sourceTree = "<group>"; };
 		EF0A89FF9CC0E531722FCE9F /* Pods_Snoring_Companion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snoring_Companion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 		3599D15820922C2200236F3D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3599D15B20922F2100236F3D /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			files = (
 				3599D1472092290400236F3D /* ViewController.swift in Sources */,
 				3599D1452092290400236F3D /* AppDelegate.swift in Sources */,
+				3599D15C20922F2100236F3D /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +373,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Snoring Companion/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "XR.Snoring-Companion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -384,7 +391,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Snoring Companion/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "XR.Snoring-Companion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
