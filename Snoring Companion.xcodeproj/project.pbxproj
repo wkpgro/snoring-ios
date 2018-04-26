@@ -12,9 +12,11 @@
 		3599D14A2092290400236F3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3599D1482092290400236F3D /* Main.storyboard */; };
 		3599D14C2092290600236F3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3599D14B2092290600236F3D /* Assets.xcassets */; };
 		3599D14F2092290600236F3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3599D14D2092290600236F3D /* LaunchScreen.storyboard */; };
+		438B7340368B914AC33BAA3A /* Pods_Snoring_Companion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0A89FF9CC0E531722FCE9F /* Pods_Snoring_Companion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F6BE15F2E4DA600B3CCE9C7 /* Pods-Snoring Companion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snoring Companion.release.xcconfig"; path = "Pods/Target Support Files/Pods-Snoring Companion/Pods-Snoring Companion.release.xcconfig"; sourceTree = "<group>"; };
 		3599D1412092290400236F3D /* Snoring Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Snoring Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3599D1442092290400236F3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3599D1462092290400236F3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		3599D14B2092290600236F3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3599D14E2092290600236F3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3599D1502092290600236F3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB1DDA133395C11D093F56E5 /* Pods-Snoring Companion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snoring Companion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snoring Companion/Pods-Snoring Companion.debug.xcconfig"; sourceTree = "<group>"; };
+		EF0A89FF9CC0E531722FCE9F /* Pods_Snoring_Companion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snoring_Companion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438B7340368B914AC33BAA3A /* Pods_Snoring_Companion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				3599D1432092290400236F3D /* Snoring Companion */,
 				3599D1422092290400236F3D /* Products */,
+				C7E13FC47605CD7A0BB56205 /* Pods */,
+				B4A5B140B1AF163BC8006E9D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +63,69 @@
 			children = (
 				3599D1442092290400236F3D /* AppDelegate.swift */,
 				3599D1462092290400236F3D /* ViewController.swift */,
+				3599D15820922C2200236F3D /* Controller */,
+				3599D15620922C2200236F3D /* Model */,
+				3599D15920922C2200236F3D /* Resources */,
+				3599D15A20922C2200236F3D /* View */,
 				3599D1482092290400236F3D /* Main.storyboard */,
 				3599D14B2092290600236F3D /* Assets.xcassets */,
 				3599D14D2092290600236F3D /* LaunchScreen.storyboard */,
 				3599D1502092290600236F3D /* Info.plist */,
 			);
 			path = "Snoring Companion";
+			sourceTree = "<group>";
+		};
+		3599D15620922C2200236F3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3599D15720922C2200236F3D /* Managers */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3599D15720922C2200236F3D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		3599D15820922C2200236F3D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3599D15920922C2200236F3D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3599D15A20922C2200236F3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4A5B140B1AF163BC8006E9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF0A89FF9CC0E531722FCE9F /* Pods_Snoring_Companion.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7E13FC47605CD7A0BB56205 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB1DDA133395C11D093F56E5 /* Pods-Snoring Companion.debug.xcconfig */,
+				1F6BE15F2E4DA600B3CCE9C7 /* Pods-Snoring Companion.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,6 +135,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3599D1532092290600236F3D /* Build configuration list for PBXNativeTarget "Snoring Companion" */;
 			buildPhases = (
+				23BFDEE185FC6675A175B13C /* [CP] Check Pods Manifest.lock */,
 				3599D13D2092290400236F3D /* Sources */,
 				3599D13E2092290400236F3D /* Frameworks */,
 				3599D13F2092290400236F3D /* Resources */,
@@ -129,6 +194,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23BFDEE185FC6675A175B13C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Snoring Companion-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3599D13D2092290400236F3D /* Sources */ = {
@@ -278,14 +364,12 @@
 		};
 		3599D1542092290600236F3D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB1DDA133395C11D093F56E5 /* Pods-Snoring Companion.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Snoring Companion/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "XR.Snoring-Companion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -295,14 +379,12 @@
 		};
 		3599D1552092290600236F3D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F6BE15F2E4DA600B3CCE9C7 /* Pods-Snoring Companion.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Snoring Companion/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "XR.Snoring-Companion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
