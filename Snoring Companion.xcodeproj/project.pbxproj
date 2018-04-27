@@ -14,6 +14,13 @@
 		3599D14F2092290600236F3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3599D14D2092290600236F3D /* LaunchScreen.storyboard */; };
 		3599D15C20922F2100236F3D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3599D15B20922F2100236F3D /* HomeViewController.swift */; };
 		3599D15F209233C600236F3D /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3599D15E209233C600236F3D /* Global.swift */; };
+		3599D16120924EF400236F3D /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3599D16020924EF400236F3D /* StartViewController.swift */; };
+		3599D16320924F5000236F3D /* UIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3599D16220924F5000236F3D /* UIManager.swift */; };
+		3599D165209278D400236F3D /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3599D164209278D400236F3D /* ConfigurationViewController.swift */; };
+		3599D167209278E500236F3D /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3599D166209278E500236F3D /* ReportsViewController.swift */; };
+		3599D169209278F300236F3D /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3599D168209278F300236F3D /* HistoryViewController.swift */; };
+		3599D16B20927A2A00236F3D /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3599D16A20927A2A00236F3D /* PrivacyViewController.swift */; };
+		3599D16D2092C0EE00236F3D /* TextUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3599D16C2092C0EE00236F3D /* TextUtils.swift */; };
 		438B7340368B914AC33BAA3A /* Pods_Snoring_Companion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0A89FF9CC0E531722FCE9F /* Pods_Snoring_Companion.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +35,13 @@
 		3599D1502092290600236F3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3599D15B20922F2100236F3D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3599D15E209233C600236F3D /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		3599D16020924EF400236F3D /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		3599D16220924F5000236F3D /* UIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIManager.swift; sourceTree = "<group>"; };
+		3599D164209278D400236F3D /* ConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
+		3599D166209278E500236F3D /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
+		3599D168209278F300236F3D /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		3599D16A20927A2A00236F3D /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		3599D16C2092C0EE00236F3D /* TextUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextUtils.swift; sourceTree = "<group>"; };
 		CB1DDA133395C11D093F56E5 /* Pods-Snoring Companion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snoring Companion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snoring Companion/Pods-Snoring Companion.debug.xcconfig"; sourceTree = "<group>"; };
 		EF0A89FF9CC0E531722FCE9F /* Pods_Snoring_Companion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snoring_Companion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -91,6 +105,8 @@
 		3599D15720922C2200236F3D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				3599D16220924F5000236F3D /* UIManager.swift */,
+				3599D16C2092C0EE00236F3D /* TextUtils.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -99,6 +115,11 @@
 			isa = PBXGroup;
 			children = (
 				3599D15B20922F2100236F3D /* HomeViewController.swift */,
+				3599D16020924EF400236F3D /* StartViewController.swift */,
+				3599D164209278D400236F3D /* ConfigurationViewController.swift */,
+				3599D166209278E500236F3D /* ReportsViewController.swift */,
+				3599D168209278F300236F3D /* HistoryViewController.swift */,
+				3599D16A20927A2A00236F3D /* PrivacyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -235,10 +256,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3599D16120924EF400236F3D /* StartViewController.swift in Sources */,
 				3599D15F209233C600236F3D /* Global.swift in Sources */,
 				3599D1472092290400236F3D /* ViewController.swift in Sources */,
 				3599D1452092290400236F3D /* AppDelegate.swift in Sources */,
+				3599D167209278E500236F3D /* ReportsViewController.swift in Sources */,
+				3599D165209278D400236F3D /* ConfigurationViewController.swift in Sources */,
+				3599D16D2092C0EE00236F3D /* TextUtils.swift in Sources */,
+				3599D169209278F300236F3D /* HistoryViewController.swift in Sources */,
+				3599D16B20927A2A00236F3D /* PrivacyViewController.swift in Sources */,
 				3599D15C20922F2100236F3D /* HomeViewController.swift in Sources */,
+				3599D16320924F5000236F3D /* UIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
