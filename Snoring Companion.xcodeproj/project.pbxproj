@@ -21,6 +21,11 @@
 		3599D169209278F300236F3D /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3599D168209278F300236F3D /* HistoryViewController.swift */; };
 		3599D16B20927A2A00236F3D /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3599D16A20927A2A00236F3D /* PrivacyViewController.swift */; };
 		3599D16D2092C0EE00236F3D /* TextUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3599D16C2092C0EE00236F3D /* TextUtils.swift */; };
+		35C2211C2094CFAA00AFACE8 /* white-not-charging.png in Resources */ = {isa = PBXBuildFile; fileRef = 35C2211B2094CFAA00AFACE8 /* white-not-charging.png */; };
+		35C2211E2094CFF300AFACE8 /* white-charing-battery.png in Resources */ = {isa = PBXBuildFile; fileRef = 35C2211D2094CFF300AFACE8 /* white-charing-battery.png */; };
+		35C221212094D52D00AFACE8 /* white-storage.png in Resources */ = {isa = PBXBuildFile; fileRef = 35C2211F2094D52C00AFACE8 /* white-storage.png */; };
+		35C221222094D52D00AFACE8 /* white-not-storage.png in Resources */ = {isa = PBXBuildFile; fileRef = 35C221202094D52C00AFACE8 /* white-not-storage.png */; };
+		35C221242094DE2200AFACE8 /* white-iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 35C221232094DE2200AFACE8 /* white-iPhone.png */; };
 		438B7340368B914AC33BAA3A /* Pods_Snoring_Companion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0A89FF9CC0E531722FCE9F /* Pods_Snoring_Companion.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +47,11 @@
 		3599D168209278F300236F3D /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		3599D16A20927A2A00236F3D /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		3599D16C2092C0EE00236F3D /* TextUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextUtils.swift; sourceTree = "<group>"; };
+		35C2211B2094CFAA00AFACE8 /* white-not-charging.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-not-charging.png"; sourceTree = "<group>"; };
+		35C2211D2094CFF300AFACE8 /* white-charing-battery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-charing-battery.png"; sourceTree = "<group>"; };
+		35C2211F2094D52C00AFACE8 /* white-storage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-storage.png"; sourceTree = "<group>"; };
+		35C221202094D52C00AFACE8 /* white-not-storage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-not-storage.png"; sourceTree = "<group>"; };
+		35C221232094DE2200AFACE8 /* white-iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-iPhone.png"; sourceTree = "<group>"; };
 		CB1DDA133395C11D093F56E5 /* Pods-Snoring Companion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snoring Companion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snoring Companion/Pods-Snoring Companion.debug.xcconfig"; sourceTree = "<group>"; };
 		EF0A89FF9CC0E531722FCE9F /* Pods_Snoring_Companion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snoring_Companion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -127,6 +137,11 @@
 		3599D15920922C2200236F3D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				35C2211B2094CFAA00AFACE8 /* white-not-charging.png */,
+				35C221232094DE2200AFACE8 /* white-iPhone.png */,
+				35C2211D2094CFF300AFACE8 /* white-charing-battery.png */,
+				35C221202094D52C00AFACE8 /* white-not-storage.png */,
+				35C2211F2094D52C00AFACE8 /* white-storage.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -223,8 +238,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3599D14F2092290600236F3D /* LaunchScreen.storyboard in Resources */,
+				35C2211E2094CFF300AFACE8 /* white-charing-battery.png in Resources */,
+				35C2211C2094CFAA00AFACE8 /* white-not-charging.png in Resources */,
+				35C221242094DE2200AFACE8 /* white-iPhone.png in Resources */,
 				3599D14C2092290600236F3D /* Assets.xcassets in Resources */,
 				3599D14A2092290400236F3D /* Main.storyboard in Resources */,
+				35C221212094D52D00AFACE8 /* white-storage.png in Resources */,
+				35C221222094D52D00AFACE8 /* white-not-storage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,13 +432,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B5RTAUPT72;
 				INFOPLIST_FILE = "Snoring Companion/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "XR.Snoring-Companion";
+				PRODUCT_BUNDLE_IDENTIFIER = com.categon.categontest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -431,13 +452,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B5RTAUPT72;
 				INFOPLIST_FILE = "Snoring Companion/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "XR.Snoring-Companion";
+				PRODUCT_BUNDLE_IDENTIFIER = com.categon.categontest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

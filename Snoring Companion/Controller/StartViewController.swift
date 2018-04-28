@@ -10,12 +10,25 @@ import UIKit
 
 class StartViewController: UIViewController {
 
-    @IBOutlet weak var m_txtView: UITextView!
-    @IBOutlet weak var m_chargerBtn: UIButton!
-    @IBOutlet weak var m_storageBtn: UIButton!
+//    @IBOutlet weak var m_txtView: UITextView!
+    @IBOutlet weak var m_chargerLbl: UILabel!
+    @IBOutlet weak var m_storageLbl: UILabel!
+    @IBOutlet weak var m_animationImgView: UIImageView!
+    @IBOutlet weak var m_gotITBtn: UIButton!
+    @IBOutlet weak var m_pageCtrl: UIPageControl!
+    
+    @IBOutlet weak var m_blurView: UIVisualEffectView!
+    @IBOutlet weak var m_scrollView: UIScrollView!
     
     var green_color = UIColor(red: CGFloat(15.0 / 255.0), green: CGFloat(250.0 / 255.0), blue: CGFloat(183.0 / 255.0), alpha: 1.0)
-    var red_color = UIColor.red
+    var red_color = UIColor(red: CGFloat(255.0 / 255.0), green: CGFloat(34.0 / 255.0), blue: CGFloat(68.0 / 255.0), alpha: 1.0)
+    
+    var is_charging = true
+    var is_enough = false
+    
+    var is_skip = false
+    
+    var animation_image = UIImage(named: "white-not-charing.png")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,50 +56,68 @@ class StartViewController: UIViewController {
         self.view.layer.insertSublayer(gradientLayer, at: 0)
         
         UIManager.addNavBarItem(targetController: self, selector: #selector(onMainBtn(_:)))
-        
-        
-        let text = "Step 1\nMake sure phone is connected to charger. \nPlease see Charger connected status at bottom of this screen.\n\nStep 2\nPlace your phone near you so that its micorphone can detect your snoring.\n Make sure your phone is placed face down and the screen will turn off automatically.\n\nStep 3\nThe Snoring Companion will wait 10 minutes from NOW for you to go to sleep to start detection and alarming."
-//        self.tapRange = (text as NSString).range(of: "Terms of Services")
-        let attributtedString = NSMutableAttributedString(string: text)
-//        attributtedString.addAttribute(NSLinkAttributeName, value: URL(string: categon_service_team_url)!, range: self.tapRange!)
-//        attributtedString.addAttribute(NSFontAttributeName, value: UIFont(name: "Avenir-Book", size: 10.0)!, range: self.tapRange!)
-//        attributtedString.addAttribute(NSUnderlineStyleAttributeName, value: NSUnderlineStyle.styleSingle.rawValue, range: self.tapRange!)
-        self.m_txtView.attributedText = attributtedString
-        
-        
-        
-        
     }
     
     func loadData() {
-        let charging_text = "Charger\nis connected"
-        let storage_text = "Storage\nspace ok"
+        var charging_text = "Charger is Connected"
+        var storage_text = "Storage space OK"
         
-        self.m_chargerBtn.tag = 101
-        let charge_attributtedString = NSMutableAttributedString(string: charging_text)
-        let paragraph = NSMutableParagraphStyle()
-        paragraph.alignment = .center
+        self.m_storageLbl.layer.borderColor = UIColor.white.cgColor
+        self.m_chargerLbl.layer.borderColor = UIColor.white.cgColor
+        self.m_storageLbl.layer.borderWidth = 0.5
+        self.m_chargerLbl.layer.borderWidth = 0.5
         
-//
-//        CTParagraphStyleSetting settings[1] = {alignmentSetting};
-//
-//        size_t settingsCount = 1;
-//        CTParagraphStyleRef paragraphRef = CTParagraphStyleCreate(settings, settingsCount);
-//        NSDictionary *attributes = @{(__bridge id)kCTParagraphStyleAttributeName : (__bridge id)paragraphRef};
-//        NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:@"Hello World" attributes:attributes];
+        if is_enough == false {
+            storage_text = "Not enough Storage space"
+            self.m_storageLbl.text = storage_text
+            self.m_storageLbl.backgroundColor = red_color
+            animation_image = UIImage(named: "white-not-storage.png")
+        } else {
+            self.m_storageLbl.text = storage_text
+            self.m_storageLbl.backgroundColor = green_color
+        }
         
+        if is_charging == false {
+            charging_text = "Changer not Connected"
+            self.m_chargerLbl.text = charging_text
+            self.m_chargerLbl.backgroundColor = red_color
+            animation_image = UIImage(named: "white-not-charging.png")
+        } else {
+            self.m_chargerLbl.text = charging_text
+            self.m_chargerLbl.backgroundColor = green_color
+        }
         
-        self.m_chargerBtn.setAttributedTitle(charge_attributtedString, for: .normal)
-        self.m_chargerBtn.setTitle(charging_text, for: .normal)
-        self.m_chargerBtn.backgroundColor = green_color
+        self.m_animationImgView.image = animation_image
         
-        self.m_storageBtn.tag = 101
-        let storage_attributtedString = NSMutableAttributedString(string: storage_text)
-        self.m_storageBtn.setAttributedTitle(storage_attributtedString, for: .normal)
-        self.m_storageBtn.backgroundColor = red_color
+        if self.is_skip == false {
+            self.m_gotITBtn.layer.borderColor = UIColor.white.cgColor
+            self.m_gotITBtn.layer.borderWidth = 0.5
+        }
+        else {
+            self.removeGotItViews()
+        }
     }
     
     @objc func onMainBtn(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func onGotIt(_ sender: Any) {
+        self.removeGotItViews()
+    }
+    
+    func removeGotItViews() {
+        self.m_blurView.removeFromSuperview()
+        self.m_scrollView.removeFromSuperview()
+        self.m_pageCtrl.removeFromSuperview()
+    }
+    
+}
+
+extension StartViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let index = round(scrollView.contentOffset.x / scrollView.frame.width)
+        self.m_pageCtrl.currentPage = Int(exactly: index) ?? 0
     }
 }
